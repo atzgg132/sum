@@ -1,10 +1,10 @@
 pipeline {
-    agent {
-        // Use a Java-capable agent
-        docker {
-            image 'openjdk:11'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
+    // Use any available agent
+    agent any
+    
+    // Specify Java JDK tool
+    tools {
+        jdk 'JDK'
     }
     
     stages {
